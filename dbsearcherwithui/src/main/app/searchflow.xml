@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd">
+    <http:listener-config name="HTTP_Listener_Configuration1" host="localhost" port="5001" doc:name="HTTP Listener Configuration"/>
+    <db:mysql-config name="MySQL_Configuration1" host="localhost" port="3306" user="root" database="Personal" doc:name="MySQL Configuration"/>
+    <flow name="searchflowFlow">
+        <http:listener config-ref="HTTP_Listener_Configuration1" path="/" doc:name="HTTP"/>
+        <logger message="reached search flow ok" level="INFO" doc:name="Logger"/>
+        <logger message="#[message]" level="INFO" doc:name="Logger1"/>
+        <logger message="passed logger 1" level="INFO" doc:name="Logger"/>
+        <custom-transformer class="business.StoreDataSecection" doc:name="Java"/>
+        <logger message="passed java" level="INFO" doc:name="Logger"/>
+        <logger message="operator = #[sessionVars.operator]" level="INFO" doc:name="Logger2"/>
+        <logger message="passed logger 2" level="INFO" doc:name="Logger"/>
+        <choice doc:name="Choice">
+            <when expression="#[sessionVars.operator == 'greater']">
+                <db:select config-ref="MySQL_Configuration1" doc:name="greater">
+                    <db:dynamic-query><![CDATA[SELECT * FROM Personal WHERE #[sessionVars.field + '>' + sessionVars.chosenVal];]]></db:dynamic-query>
+                </db:select>
+                <logger message="SELECT * FROM `personal` WHERE #[sessionVars.field + '&gt;' + sessionVars.chosenVal];" level="INFO" doc:name="Logger"/>
+            </when>
+            <when expression="#[sessionVars.operator == 'less']">
+                <db:select config-ref="MySQL_Configuration1" doc:name="less">
+                    <db:dynamic-query><![CDATA[SELECT * FROM Personal WHERE #[sessionVars.field + '<' + sessionVars.chosenVal];]]></db:dynamic-query>
+                </db:select>
+                <logger message="SELECT * FROM `personal` WHERE #[sessionVars.field + '&lt;' + sessionVars.chosenVal];" level="INFO" doc:name="Logger"/>
+            </when>
+            <otherwise >
+                <db:select config-ref="MySQL_Configuration1" doc:name="equal">
+                    <db:dynamic-query><![CDATA[SELECT * FROM Personal WHERE #[sessionVars.field + '=' + sessionVars.chosenVal];]]></db:dynamic-query>
+                </db:select>
+                <logger message="SELECT * FROM `personal` WHERE #[sessionVars.field + '=' + sessionVars.chosenVal];" level="INFO" doc:name="Logger"/>
+            </otherwise>
+        </choice>
+        <json:object-to-json-transformer doc:name="Object to JSON"/>
+    </flow>
+</mule>

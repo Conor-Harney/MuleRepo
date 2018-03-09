@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Choose your data</title>
+</head>
+<body>
+	<form action="http://localhost:5001/" METHOD = "POST">
+	<H3>Please select the data you wish to view</H3>
+		Field <select name="field">
+			<option value="Marks">Marks</option>
+			<option value="AccountNumber">Account number</option>
+		</select> 
+		</br>
+		Operator <select name="operator">
+			<option value="greater">Greater than</option>
+			<option value="less">Less than</option>
+			<option value="equal">Equal to</option>
+		</select> 
+		</br>
+		Value <input type="Text" name="chosenVal"></input>
+		<input type="submit">
+	</form>
+
+</body>
+</html>

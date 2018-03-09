@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd">
+    <http:listener-config name="HTTP_Listener_Configuration" host="localhost" port="5011" doc:name="HTTP Listener Configuration"/>
+    <http:listener-config name="HTTP_Listener_Configuration1" host="localhost" port="5012" doc:name="HTTP Listener Configuration"/>
+    <http:listener-config name="HTTP_Listener_Configuration2" host="localhost" port="5015" doc:name="HTTP Listener Configuration"/>
+    <http:request-config name="HTTP_Request_Configuration"  host="jsonplaceholder.typicode.com" port="80" doc:name="HTTP Request Configuration"/>
+    <http:request-config name="HTTP_Request_Configuration1" host="data.smartdublin.ie" port="80" doc:name="HTTP Request Configuration"/>
+    <flow name="doubleflowFlow">
+        <http:listener config-ref="HTTP_Listener_Configuration2" path="/DATA" doc:name="HTTP"/>
+        <parse-template location="C:\Users\Admin\AnypointStudio\workspace\doubleFlowAccessingDummy\src\main\webapp\Details.html" doc:name="Parse Template"/>
+    </flow>
+    <flow name="doubleflowFlow2">
+        <http:listener config-ref="HTTP_Listener_Configuration1" path="/DATA"  doc:name="HTTPFlow1"/>
+        <custom-transformer encoding="ISO-8859-2" class="com.qa.business.DataEditor" doc:name="Java"/>
+        <choice doc:name="Choice">
+            <when expression="#[sessionVars.site=='jsonplaceholder']">
+                <http:request config-ref="HTTP_Request_Configuration" path="/posts/#[sessionVars.recordID]" method="GET" doc:name="HTTP"/>
+                <logger message="#[sessionVars.site]" level="INFO" doc:name="Logger"/>
+            </when>
+            <when expression="#[sessionVars.site=='smartdublin']">
+                <http:request config-ref="HTTP_Request_Configuration1" path="/cgi-bin/rtpi/busstopinformation?stopid&amp;format=json" method="GET" doc:name="HTTP"/>
+            </when>
+        </choice>
+    </flow>
+</mule>

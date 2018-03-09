@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd">
+    <http:listener-config name="HTTP_Listener_Configuration" host="localhost" port="5011" doc:name="HTTP Listener Configuration"/>
+    <http:listener-config name="HTTP_Listener_Configuration1" host="localhost" port="5012" doc:name="HTTP Listener Configuration"/>
+    <flow name="doubleflowFlow1">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/DATA2" doc:name="HTTPFlow2" allowedMethods="POST"/>
+        <parse-template location="C:\Users\Admin\AnypointStudio\workspace\doubleflow\src\main\webapp\Details2.html" doc:name="Parse Template"/>
+    </flow>
+    <flow name="doubleflowFlow2">
+        <http:listener config-ref="HTTP_Listener_Configuration1" path="/DATA" allowedMethods="POST" doc:name="HTTPFlow1"/>
+        <json:object-to-json-transformer doc:name="Object to JSON"/>
+        <logger message="message" level="INFO" doc:name="Logger"/>
+        <json:json-to-object-transformer returnClass="com.qa.domain.Data" doc:name="JSON to Object"/>
+    </flow>
+</mule>
