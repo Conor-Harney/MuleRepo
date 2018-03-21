@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<head>
+<meta charset="ISO-8859-1">
+<title>Inbox</title>
+<style>
+Tabel {
+   border: 1px solid black; 
+   width:100%;
+}
+
+th { 
+    width:11%;
+}
+
+td {
+    border: 1px solid black; 
+    width:11%;
+}
+</style>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+
+	<h2>Hello #[sessionVars.userName]</h2>
+	<button>Compose</button>
+	<h3>messages</h3>
+	<h3> </h3>
+	
+	<table style = "border: 1px solid black; width:100%">
+		<tr>
+	   		<th>To</th>
+	   		<th>From</th>
+	   		<th>Subject</th>
+	   		<th>Body</th>
+	   		<th>Date</th>
+	   		<th>EmailID</th>
+	   		<th>NewOld</th>
+	 	</tr>
+	  	<tr ng-repeat="y in emailStrings track by $index" ng-click="go(http://localhost/phpmyadmin/tbl_sql.php?db=emailsystem&table=email&token=cb1e2f5b981e96db4de620212603f86a)">
+	    	<td>{{y.ToUser}}</td>
+	    	<td>{{y.FromUser}}</td>
+	    	<td>{{y.Subject}}</td>
+	    	<td>{{y.Body}}</td>
+	    	<td>{{y.Date}}</td>
+	    	<td>{{y.EmailID}}</td>
+	    	<td>{{y.NewOld}}</td>
+	  	</tr>
+	</table>
+	
+	
+	<script>
+		var app = angular.module("myApp", []);
+		app.controller("myCtrl", function($scope) {
+		  
+		  $scope.emailStrings = [];
+		  var pl = #[payload];
+		  for(var eml in pl) {
+			  var oneEmail = pl[eml];
+			  $scope.emailStrings.push(oneEmail);
+		  }
+		  
+		  
+		  
+		});
+	</script>
+</body>
+</html>

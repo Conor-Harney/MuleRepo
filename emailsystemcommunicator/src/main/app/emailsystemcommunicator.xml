@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns:cors="http://www.mulesoft.org/schema/mule/cors" xmlns:wmq="http://www.mulesoft.org/schema/mule/ee/wmq" xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd
+http://www.mulesoft.org/schema/mule/ee/wmq http://www.mulesoft.org/schema/mule/ee/wmq/current/mule-wmq-ee.xsd
+http://www.mulesoft.org/schema/mule/cors http://www.mulesoft.org/schema/mule/cors/current/mule-cors.xsd">
+    <http:listener-config name="listenFoRequest" host="0.0.0.0" port="5010" doc:name="HTTP Listener Configuration"/>
+    <db:mysql-config name="MySQL_Configuration" host="localhost" port="3306" user="root" database="emailsystem" doc:name="MySQL Configuration"/>
+    <cors:config name="Cors_Configuration" doc:name="Cors Configuration">
+     <cors:origins>
+         <cors:origin url="*" accessControlMaxAge="180">
+             <cors:methods>
+                 <cors:method>GET</cors:method>
+                 <cors:method>POST</cors:method>
+                 <cors:method>PUT</cors:method>
+                 <cors:method>DELETE</cors:method>
+                 <cors:method>OPTIONS</cors:method>
+             </cors:methods>
+             <cors:headers>
+                 <cors:header>X-Allow-Origin</cors:header>
+             </cors:headers>
+         </cors:origin>
+     </cors:origins>
+ </cors:config>
+    <flow name="emailsystemcommunicatorFlow">
+        <http:listener config-ref="listenFoRequest" path="/" doc:name="HTTP" metadata:id="24a3152d-1c88-41e5-a695-9bd78b91114f"/>
+        <cors:validate config-ref="Cors_Configuration" publicResource="true" acceptsCredentials="false" doc:name="CORS Validate"/>
+        <logger message="payload = #[payload]" level="INFO" doc:name="Logger"/>
+        <set-payload value="#[message.inboundProperties.'http.query.params']" doc:name="Set Payload" encoding="ISO-8859-6"/>
+        <logger message="name = #[payload['userName']]" level="INFO" doc:name="Logger"/>
+        <logger message="select * from users where Password = #[payload['userPassword']] and UserName = #[payload['userName']]" level="INFO" doc:name="Logger"/>
+        <db:select config-ref="MySQL_Configuration" doc:name="Database">
+            <db:parameterized-query><![CDATA[select * from users where Password = #[payload['userPassword']] and UserName = #[payload['userName']]]]></db:parameterized-query>
+        </db:select>
+        <logger message="payload = #[payload]" level="INFO" doc:name="Copy_of_Logger"/>
+        <logger message="payload size = #[payload.size() ]" level="INFO" doc:name="Copy_of_Copy_of_Logger"/>
+        <choice doc:name="Choice">
+            <when expression="#[payload.size() &gt;0]">
+                <logger message="returning results" level="INFO" doc:name="Logger"/>
+                <set-payload value="correct" doc:name="Set Payload"/>
+                <logger message="payload = #[payload]" level="INFO" doc:name="Copy_of_Copy_of_Logger"/>
+                <logger message="message = #[message]" level="INFO" doc:name="Logger"/>
+            </when>
+            <otherwise>
+                <set-payload value="incorrect" doc:name="Set Payload"/>
+            </otherwise>
+        </choice>
+        <json:object-to-json-transformer doc:name="Object to JSON"/>
+        <logger message="payload = #[payload]" level="INFO" doc:name="Copy_of_Copy_of_Logger"/>
+    </flow>
+</mule>

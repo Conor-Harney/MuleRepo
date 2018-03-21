@@ -1,0 +1,26 @@
+<html ng-app="countryApp">
+<head>
+	<meta charset="utf-8">
+	<title>Angular.js JSON Fetching Example</title>
+	<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<script>
+		var countryApp = angular.module('countryApp', []);
+		countryApp.controller('CountryCtrl', function($scope, $http) {
+			
+			logMeIn(name, password)
+			{
+				$http.post('http://localhost:5010').success(function() {
+				});
+			}
+		});
+	</script>
+</head>
+<body ng-controller="CountryCtrl">
+	<h2>Angular.js JSON Fetching Example</h2>
+	User: <input type="text" name="userName"></input> 
+		</br> 
+		Password: <input type="text" name="userPassword"></input> 
+		</br> <Button ng-click=""></button>
+</body>
+</html>

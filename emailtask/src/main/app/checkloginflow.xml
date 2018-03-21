@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd">
+    <http:listener-config name="checkLoginListener" host="0.0.0.0" port="5001" doc:name="HTTP Listener Configuration"/>
+    <db:mysql-config name="MySQL_Configuration" host="localhost" port="3306" user="root" database="emailsystem" doc:name="MySQL Configuration"/>
+    <flow name="checkloginflowFlow">
+        <http:listener config-ref="checkLoginListener" path="/checkLogin" doc:name="HTTP"/>
+        <logger message="#[payload]" level="INFO" doc:name="Logger"/>
+        <db:select config-ref="MySQL_Configuration" doc:name="Database">
+            <db:parameterized-query><![CDATA[select * from users where username = #[payload.userName] && password = #[payload.userPassword]]]></db:parameterized-query>
+        </db:select>
+        <logger message="#[payload]" level="INFO" doc:name="Copy_of_Logger"/>
+        <logger message="size: #[payload.size()]" level="INFO" doc:name="Copy_of_Copy_of_Logger"/>
+        <choice doc:name="Choice">
+            <when expression="#[payload.size() ==1]">
+                <json:object-to-json-transformer doc:name="Object to JSON"/>
+                <custom-transformer class="com.qa.business.ExtractUserDetails" doc:name="Java"/>
+                <logger message="#[sessionVars.userName]" level="INFO" doc:name="session name logger"/>
+                <logger message="Select * from email where toUser = #[sessionVars.userName]" level="INFO" doc:name="select satament "/>
+                <db:select config-ref="MySQL_Configuration" doc:name="Database">
+                    <db:dynamic-query><![CDATA[Select * from email where toUser = #[sessionVars.userName]]]></db:dynamic-query>
+                </db:select>
+                <json:object-to-json-transformer doc:name="Object to JSON"/>
+                <parse-template location="C:\Users\Admin\AnypointStudio\workspace\emailtask\src\main\webapp\angularTest.html" doc:name="Parse Template"/>
+                <set-property propertyName="content-type" value="text/html" doc:name="Property"/>
+            </when>
+        </choice>
+    </flow>
+    <sub-flow name="checkloginflowSub_Flow">
+        <custom-transformer class="com.qa.business.ExtractEmailDetails" doc:name="Java"/>
+    </sub-flow>
+</mule>

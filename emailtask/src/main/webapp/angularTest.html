@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js" type="text/javascript"></script>
+<script src="scripts/Controller.js" type="text/javascript"></script>
+</head>
+
+
+<body onload="init()" ng-app="myApp" ng-controller="myCtrl">
+	
+	<h1>Angular test page</h1>
+
+	<h1 ng-repeat="y in emailStrings">{{y}}</h1>
+	
+	<script>
+		var app = angular.module("myApp", []);
+		app.controller("myCtrl", function($scope) {
+				  
+			$scope.emailStrings = [];
+			var pl = #[payload];
+			for(var eml in pl) {
+				var oneEmail = pl[eml];
+				$scope.emailStrings.push(oneEmail);
+			}
+		});
+	</script>
+
+</body>
+</html>

@@ -28,6 +28,11 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
                 <set-payload value="do not devide by zero " doc:name="Set Payload"/>
                 <parse-template location="C:\Users\Admin\AnypointStudio\workspace\MathApp\src\main\webapp\errorfile.html" doc:name="Parse Template"/>
             </catch-exception-strategy>
+            <catch-exception-strategy when="#[exception.causedBy(java.lang.NumberFormatException)]" doc:name="Copy_of_Catch Exception Strategy">
+                <logger message="Oh noes!!" level="INFO" doc:name="Copy_of_Logger"/>
+                <set-payload value="Please enter valid numbers" doc:name="Copy_of_Set Payload"/>
+                <parse-template location="C:\Users\Admin\AnypointStudio\workspace\MathApp\src\main\webapp\errorfile.html" doc:name="Copy_of_Parse Template"/>
+            </catch-exception-strategy>
         </choice-exception-strategy>
     </flow>
     <sub-flow name="theSubFlow">

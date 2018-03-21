@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:cors="http://www.mulesoft.org/schema/mule/cors"
+	xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:oauth2="http://www.mulesoft.org/schema/mule/oauth2" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/cors http://www.mulesoft.org/schema/mule/cors/current/mule-cors.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/oauth2 http://www.mulesoft.org/schema/mule/oauth2/current/mule-oauth2.xsd
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd">
+    <http:listener-config name="HTTP_Listener_Configuration" host="localhost" port="5000" doc:name="HTTP Listener Configuration"/>
+    <http:request-config name="HTTP_Request_Configuration" protocol="HTTPS" host="vision.googleapis.com" port="443" doc:name="HTTP Request Configuration">
+    </http:request-config>
+    <cors:config name="Cors_Configuration" doc:name="Cors Configuration">
+     <cors:origins>
+         <cors:origin url="*" accessControlMaxAge="180">
+             <cors:methods>
+                 <cors:method>GET</cors:method>
+                 <cors:method>POST</cors:method>
+                 <cors:method>PUT</cors:method>
+                 <cors:method>DELETE</cors:method>
+                 <cors:method>OPTIONS</cors:method>
+             </cors:methods>
+             <cors:headers>
+                 <cors:header>X-Allow-Origin</cors:header>
+             </cors:headers>
+         </cors:origin>
+     </cors:origins>
+ </cors:config>
+    <flow name="googleapiFlow">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/" doc:name="HTTP"/>
+        <cors:validate config-ref="Cors_Configuration" publicResource="true" acceptsCredentials="false" doc:name="CORS Validate"/>
+        <custom-transformer class="Trasformer.transform" doc:name="Java"/>
+        <json:object-to-json-transformer doc:name="Object to JSON"/>
+        <logger message="**********************&gt;#[payload]" level="INFO" doc:name="Logger"/>
+    </flow>
+    <sub-flow name="googleapiSub_Flow">
+        <set-session-variable variableName="b64img" value="#[payload]" doc:name="Session Variable"/>
+        <set-payload value="{   &quot;requests&quot;:[     {       &quot;image&quot;:{         &quot;content&quot;: &quot;#[sessionVars.b64img]&quot;         },       &quot;features&quot;: [         {            &quot;type&quot;: &quot;TEXT_DETECTION&quot;         }       ]     }   ] }" doc:name="Set Payload"/>
+        <http:request config-ref="HTTP_Request_Configuration" path="/v1/images:annotate" method="POST" doc:name="HTTP">
+            <http:request-builder>
+                <http:header headerName="Authorization" value="Bearer ya29.c.El-ABcp3BCdBO2BhibjyvPaaAEauKbDFoe0eCbYkaszYZxQVimOgPj8Ozm94odRdETKJ7o1x4XYt5gA2GHVAFOvj6DXsOlt3wicAF7Y9RsKYQL67DGMd6FZEDDqwbpjIqw"/>
+            </http:request-builder>
+        </http:request>
+        <json:json-to-object-transformer returnClass="java.util.HashMap" doc:name="JSON to Object"/>
+        <set-session-variable variableName="Text" value="#[payload['responses'][0]['textAnnotations'][0]['description']]" doc:name="Session Variable"/>
+        <set-payload value="#[sessionVars.Text]" doc:name="Set Payload"/>
+    </sub-flow>
+</mule>

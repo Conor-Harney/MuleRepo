@@ -1,0 +1,922 @@
+2018-03-15 10:06:17,706 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'dataweaving'                           +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:06:17,838 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2018-03-15 10:06:17,947 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2018-03-15 10:06:18,041 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2018-03-15 10:06:18,041 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.8)
+2018-03-15 10:06:18,103 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@544630b7: startup date [Thu Mar 15 10:06:18 GMT 2018]; root of context hierarchy
+2018-03-15 10:06:19,181 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-03-15 10:06:19,878 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2018-03-15 10:06:20,581 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-tx-log\tx1.log and C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-tx-log\tx2.log
+2018-03-15 10:06:20,589 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-xa-tx-log\tx1.log and C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-xa-tx-log\tx2.log
+2018-03-15 10:06:20,667 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2018-03-15 10:06:20,667 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: dataweavingFlow
+2018-03-15 10:06:20,667 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@5416f8db
+2018-03-15 10:06:20,698 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: dataweavingFlow.stage1
+2018-03-15 10:06:20,917 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Admin\AnypointStudio\workspace\.mule\apps\dataweaving\dataweaving.xml'}]"
+2018-03-15 10:06:20,917 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Admin\AnypointStudio\workspace\.mule\apps\dataweaving\dataweaving.xml'}]"
+2018-03-15 10:06:23,933 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'dataweaving'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:06:23,943 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2018-03-15 10:06:23,943 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2018-03-15 10:06:23,990 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:5005
+2018-03-15 10:06:23,990 [main] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:06:23,990 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2018-03-15 10:06:24,006 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: dataweavingFlow
+2018-03-15 10:06:24,006 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: dataweavingFlow.stage1
+2018-03-15 10:06:24,037 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2018-03-15 10:06:24,053 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: dataweaving                                           *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2018-03-15 10:06:28,096 [[dataweaving].listenForInfo.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - No listener found for request: (GET)/favicon.ico
+2018-03-15 10:06:28,096 [[dataweaving].listenForInfo.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - Available listeners are: [(*)/]
+2018-03-15 10:07:54,297 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'dataweaving'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:07:54,297 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: dataweavingFlow
+2018-03-15 10:07:54,297 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: dataweavingFlow.stage1
+2018-03-15 10:07:54,484 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2018-03-15 10:07:54,500 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://0.0.0.0:5005
+2018-03-15 10:07:54,500 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2018-03-15 10:07:54,500 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2018-03-15 10:07:54,516 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'dataweaving'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:07:54,516 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2018-03-15 10:07:54,516 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: dataweavingFlow
+2018-03-15 10:07:54,516 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: dataweavingFlow.stage1
+2018-03-15 10:07:54,516 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2018-03-15 10:07:54,625 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@544630b7: startup date [Thu Mar 15 10:06:18 GMT 2018]; root of context hierarchy
+2018-03-15 10:07:54,672 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "dataweaving" shut down normally on: 15/03/18 10:07    *
+* Up for: 0 days, 0 hours, 1 mins, 30.739 sec                        *
+**********************************************************************
+2018-03-15 10:07:54,750 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'dataweaving'                           +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:07:54,750 [Mule.app.deployer.monitor.1.thread.1] WARN  com.mulesoft.module.client.APIPlatformClientCoreExtension - Client ID or Client Secret were not provided. API Manager client is DISABLED for app dataweaving
+2018-03-15 10:07:54,750 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2018-03-15 10:07:54,766 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2018-03-15 10:07:54,766 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2018-03-15 10:07:54,766 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.8)
+2018-03-15 10:07:54,813 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@20f9eb45: startup date [Thu Mar 15 10:07:54 GMT 2018]; root of context hierarchy
+2018-03-15 10:07:55,063 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-03-15 10:07:55,141 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-tx-log\tx1.log and C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-tx-log\tx2.log
+2018-03-15 10:07:55,141 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-xa-tx-log\tx1.log and C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-xa-tx-log\tx2.log
+2018-03-15 10:07:55,156 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2018-03-15 10:07:55,156 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: dataweavingFlow
+2018-03-15 10:07:55,156 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@6b14f03d
+2018-03-15 10:07:55,156 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: dataweavingFlow.stage1
+2018-03-15 10:07:55,406 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Admin\AnypointStudio\workspace\.mule\apps\dataweaving\dataweaving.xml'}]"
+2018-03-15 10:07:55,406 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Admin\AnypointStudio\workspace\.mule\apps\dataweaving\dataweaving.xml'}]"
+2018-03-15 10:07:59,425 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'dataweaving'                           +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:07:59,543 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2018-03-15 10:07:59,652 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2018-03-15 10:07:59,761 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2018-03-15 10:07:59,761 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.8)
+2018-03-15 10:07:59,824 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@3d6300e8: startup date [Thu Mar 15 10:07:59 GMT 2018]; root of context hierarchy
+2018-03-15 10:08:00,949 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-03-15 10:08:01,627 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2018-03-15 10:08:02,314 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-tx-log\tx1.log and C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-tx-log\tx2.log
+2018-03-15 10:08:02,326 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-xa-tx-log\tx1.log and C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-xa-tx-log\tx2.log
+2018-03-15 10:08:02,419 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2018-03-15 10:08:02,419 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: dataweavingFlow
+2018-03-15 10:08:02,419 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@64942607
+2018-03-15 10:08:02,451 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: dataweavingFlow.stage1
+2018-03-15 10:08:02,857 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Admin\AnypointStudio\workspace\.mule\apps\dataweaving\dataweaving.xml'}]"
+2018-03-15 10:08:02,857 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Admin\AnypointStudio\workspace\.mule\apps\dataweaving\dataweaving.xml'}]"
+2018-03-15 10:08:05,888 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'dataweaving'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:08:05,896 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2018-03-15 10:08:05,896 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2018-03-15 10:08:05,958 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:5005
+2018-03-15 10:08:05,958 [main] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:08:05,958 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2018-03-15 10:08:05,958 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: dataweavingFlow
+2018-03-15 10:08:05,958 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: dataweavingFlow.stage1
+2018-03-15 10:08:05,989 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2018-03-15 10:08:06,005 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: dataweaving                                           *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2018-03-15 10:11:21,581 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'dataweaving'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:11:21,581 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: dataweavingFlow
+2018-03-15 10:11:21,581 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: dataweavingFlow.stage1
+2018-03-15 10:11:21,675 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2018-03-15 10:11:21,691 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://0.0.0.0:5005
+2018-03-15 10:11:21,691 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2018-03-15 10:11:21,691 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2018-03-15 10:11:21,706 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'dataweaving'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:11:21,706 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2018-03-15 10:11:21,706 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: dataweavingFlow
+2018-03-15 10:11:21,706 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: dataweavingFlow.stage1
+2018-03-15 10:11:21,706 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2018-03-15 10:11:21,831 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@3d6300e8: startup date [Thu Mar 15 10:07:59 GMT 2018]; root of context hierarchy
+2018-03-15 10:11:22,035 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "dataweaving" shut down normally on: 15/03/18 10:11    *
+* Up for: 0 days, 0 hours, 3 mins, 16.147 sec                        *
+**********************************************************************
+2018-03-15 10:11:22,144 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'dataweaving'                           +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:11:22,144 [Mule.app.deployer.monitor.1.thread.1] WARN  com.mulesoft.module.client.APIPlatformClientCoreExtension - Client ID or Client Secret were not provided. API Manager client is DISABLED for app dataweaving
+2018-03-15 10:11:22,144 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2018-03-15 10:11:22,144 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2018-03-15 10:11:22,159 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2018-03-15 10:11:22,159 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.8)
+2018-03-15 10:11:22,159 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@4199545d: startup date [Thu Mar 15 10:11:22 GMT 2018]; root of context hierarchy
+2018-03-15 10:11:22,378 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-03-15 10:11:22,472 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-tx-log\tx1.log and C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-tx-log\tx2.log
+2018-03-15 10:11:22,472 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-xa-tx-log\tx1.log and C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-xa-tx-log\tx2.log
+2018-03-15 10:11:22,472 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2018-03-15 10:11:22,472 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: dataweavingFlow
+2018-03-15 10:11:22,472 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@33d42c68
+2018-03-15 10:11:22,488 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: dataweavingFlow.stage1
+2018-03-15 10:11:22,503 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Admin\AnypointStudio\workspace\.mule\apps\dataweaving\dataweaving.xml'}]"
+2018-03-15 10:11:22,503 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Admin\AnypointStudio\workspace\.mule\apps\dataweaving\dataweaving.xml'}]"
+2018-03-15 10:11:25,503 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'dataweaving'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:11:25,510 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2018-03-15 10:11:25,510 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2018-03-15 10:11:25,541 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:5005
+2018-03-15 10:11:25,541 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:11:25,541 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2018-03-15 10:11:25,541 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: dataweavingFlow
+2018-03-15 10:11:25,541 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: dataweavingFlow.stage1
+2018-03-15 10:11:25,556 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2018-03-15 10:11:25,572 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: dataweaving                                           *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2018-03-15 10:21:44,807 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'dataweaving'                           +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:21:44,948 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2018-03-15 10:21:45,057 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2018-03-15 10:21:45,135 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2018-03-15 10:21:45,135 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.8)
+2018-03-15 10:21:45,198 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@3d6300e8: startup date [Thu Mar 15 10:21:45 GMT 2018]; root of context hierarchy
+2018-03-15 10:21:46,482 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-03-15 10:21:47,388 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2018-03-15 10:21:48,040 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-tx-log\tx1.log and C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-tx-log\tx2.log
+2018-03-15 10:21:48,046 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-xa-tx-log\tx1.log and C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-xa-tx-log\tx2.log
+2018-03-15 10:21:48,140 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2018-03-15 10:21:48,140 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: dataweavingFlow
+2018-03-15 10:21:48,140 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@461c3709
+2018-03-15 10:21:48,171 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: dataweavingFlow.stage1
+2018-03-15 10:21:48,421 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Admin\AnypointStudio\workspace\.mule\apps\dataweaving\dataweaving.xml'}]"
+2018-03-15 10:21:48,421 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Admin\AnypointStudio\workspace\.mule\apps\dataweaving\dataweaving.xml'}]"
+2018-03-15 10:21:51,437 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'dataweaving'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:21:51,445 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2018-03-15 10:21:51,445 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2018-03-15 10:21:51,523 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:5005
+2018-03-15 10:21:51,523 [main] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:21:51,523 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2018-03-15 10:21:51,523 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: dataweavingFlow
+2018-03-15 10:21:51,523 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: dataweavingFlow.stage1
+2018-03-15 10:21:51,570 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2018-03-15 10:21:51,585 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: dataweaving                                           *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2018-03-15 10:23:01,827 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'dataweaving'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:23:01,827 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: dataweavingFlow
+2018-03-15 10:23:01,843 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: dataweavingFlow.stage1
+2018-03-15 10:23:01,863 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2018-03-15 10:23:01,878 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://0.0.0.0:5005
+2018-03-15 10:23:01,878 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2018-03-15 10:23:01,878 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2018-03-15 10:23:01,878 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'dataweaving'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:23:01,878 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2018-03-15 10:23:01,878 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: dataweavingFlow
+2018-03-15 10:23:01,878 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: dataweavingFlow.stage1
+2018-03-15 10:23:01,878 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2018-03-15 10:23:02,009 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@3d6300e8: startup date [Thu Mar 15 10:21:45 GMT 2018]; root of context hierarchy
+2018-03-15 10:23:02,137 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "dataweaving" shut down normally on: 15/03/18 10:23    *
+* Up for: 0 days, 0 hours, 1 mins, 10.700 sec                        *
+**********************************************************************
+2018-03-15 10:23:02,215 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'dataweaving'                           +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:23:02,215 [Mule.app.deployer.monitor.1.thread.1] WARN  com.mulesoft.module.client.APIPlatformClientCoreExtension - Client ID or Client Secret were not provided. API Manager client is DISABLED for app dataweaving
+2018-03-15 10:23:02,215 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2018-03-15 10:23:02,231 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2018-03-15 10:23:02,231 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2018-03-15 10:23:02,231 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.8)
+2018-03-15 10:23:02,231 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@24d9dad9: startup date [Thu Mar 15 10:23:02 GMT 2018]; root of context hierarchy
+2018-03-15 10:23:02,481 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-03-15 10:23:02,653 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-tx-log\tx1.log and C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-tx-log\tx2.log
+2018-03-15 10:23:02,653 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-xa-tx-log\tx1.log and C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-xa-tx-log\tx2.log
+2018-03-15 10:23:02,668 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2018-03-15 10:23:02,668 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: dataweavingFlow
+2018-03-15 10:23:02,668 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@7de21d0e
+2018-03-15 10:23:02,668 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: dataweavingFlow.stage1
+2018-03-15 10:23:02,700 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Admin\AnypointStudio\workspace\.mule\apps\dataweaving\dataweaving.xml'}]"
+2018-03-15 10:23:02,700 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Admin\AnypointStudio\workspace\.mule\apps\dataweaving\dataweaving.xml'}]"
+2018-03-15 10:23:05,707 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'dataweaving'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:23:05,710 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2018-03-15 10:23:05,710 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2018-03-15 10:23:05,710 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:5005
+2018-03-15 10:23:05,725 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:23:05,725 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2018-03-15 10:23:05,725 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: dataweavingFlow
+2018-03-15 10:23:05,725 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: dataweavingFlow.stage1
+2018-03-15 10:23:05,725 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2018-03-15 10:23:05,741 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: dataweaving                                           *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2018-03-15 10:23:47,928 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'dataweaving'                           +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:23:48,039 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2018-03-15 10:23:48,148 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2018-03-15 10:23:48,258 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2018-03-15 10:23:48,258 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.8)
+2018-03-15 10:23:48,320 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@3d6300e8: startup date [Thu Mar 15 10:23:48 GMT 2018]; root of context hierarchy
+2018-03-15 10:23:49,461 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-03-15 10:23:50,395 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2018-03-15 10:23:51,020 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-tx-log\tx1.log and C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-tx-log\tx2.log
+2018-03-15 10:23:51,032 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-xa-tx-log\tx1.log and C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-xa-tx-log\tx2.log
+2018-03-15 10:23:51,125 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2018-03-15 10:23:51,125 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: dataweavingFlow
+2018-03-15 10:23:51,125 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@461c3709
+2018-03-15 10:23:51,157 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: dataweavingFlow.stage1
+2018-03-15 10:23:51,391 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Admin\AnypointStudio\workspace\.mule\apps\dataweaving\dataweaving.xml'}]"
+2018-03-15 10:23:51,391 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Admin\AnypointStudio\workspace\.mule\apps\dataweaving\dataweaving.xml'}]"
+2018-03-15 10:23:54,422 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'dataweaving'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:23:54,431 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2018-03-15 10:23:54,431 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2018-03-15 10:23:54,493 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:5005
+2018-03-15 10:23:54,509 [main] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:23:54,509 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2018-03-15 10:23:54,509 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: dataweavingFlow
+2018-03-15 10:23:54,509 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: dataweavingFlow.stage1
+2018-03-15 10:23:54,540 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2018-03-15 10:23:54,571 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: dataweaving                                           *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2018-03-15 10:25:49,901 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'dataweaving'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:25:49,901 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: dataweavingFlow
+2018-03-15 10:25:49,901 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: dataweavingFlow.stage1
+2018-03-15 10:25:50,104 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2018-03-15 10:25:50,120 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://0.0.0.0:5005
+2018-03-15 10:25:50,120 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2018-03-15 10:25:50,120 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2018-03-15 10:25:50,136 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'dataweaving'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:25:50,136 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2018-03-15 10:25:50,136 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: dataweavingFlow
+2018-03-15 10:25:50,136 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: dataweavingFlow.stage1
+2018-03-15 10:25:50,136 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2018-03-15 10:25:50,276 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@3d6300e8: startup date [Thu Mar 15 10:23:48 GMT 2018]; root of context hierarchy
+2018-03-15 10:25:50,370 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "dataweaving" shut down normally on: 15/03/18 10:25    *
+* Up for: 0 days, 0 hours, 1 mins, 55.948 sec                        *
+**********************************************************************
+2018-03-15 10:25:50,464 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'dataweaving'                           +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:25:50,479 [Mule.app.deployer.monitor.1.thread.1] WARN  com.mulesoft.module.client.APIPlatformClientCoreExtension - Client ID or Client Secret were not provided. API Manager client is DISABLED for app dataweaving
+2018-03-15 10:25:50,479 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2018-03-15 10:25:50,479 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2018-03-15 10:25:50,495 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2018-03-15 10:25:50,495 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.8)
+2018-03-15 10:25:50,495 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@143c01a2: startup date [Thu Mar 15 10:25:50 GMT 2018]; root of context hierarchy
+2018-03-15 10:25:50,729 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-03-15 10:25:50,823 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-tx-log\tx1.log and C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-tx-log\tx2.log
+2018-03-15 10:25:50,823 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-xa-tx-log\tx1.log and C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-xa-tx-log\tx2.log
+2018-03-15 10:25:50,839 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2018-03-15 10:25:50,839 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: dataweavingFlow
+2018-03-15 10:25:50,839 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@43943d06
+2018-03-15 10:25:50,854 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: dataweavingFlow.stage1
+2018-03-15 10:25:50,886 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Admin\AnypointStudio\workspace\.mule\apps\dataweaving\dataweaving.xml'}]"
+2018-03-15 10:25:50,886 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Admin\AnypointStudio\workspace\.mule\apps\dataweaving\dataweaving.xml'}]"
+2018-03-15 10:25:53,894 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'dataweaving'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:25:53,900 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2018-03-15 10:25:53,900 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2018-03-15 10:25:53,916 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:5005
+2018-03-15 10:25:53,916 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:25:53,916 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2018-03-15 10:25:53,932 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: dataweavingFlow
+2018-03-15 10:25:53,932 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: dataweavingFlow.stage1
+2018-03-15 10:25:53,947 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2018-03-15 10:25:53,947 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: dataweaving                                           *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2018-03-15 10:25:59,613 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'dataweaving'                           +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:25:59,725 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2018-03-15 10:25:59,834 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2018-03-15 10:25:59,928 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2018-03-15 10:25:59,928 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.8)
+2018-03-15 10:25:59,990 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@3d6300e8: startup date [Thu Mar 15 10:25:59 GMT 2018]; root of context hierarchy
+2018-03-15 10:26:01,162 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-03-15 10:26:02,011 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2018-03-15 10:26:02,667 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-tx-log\tx1.log and C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-tx-log\tx2.log
+2018-03-15 10:26:02,671 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-xa-tx-log\tx1.log and C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-xa-tx-log\tx2.log
+2018-03-15 10:26:02,765 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2018-03-15 10:26:02,765 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: dataweavingFlow
+2018-03-15 10:26:02,765 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@461c3709
+2018-03-15 10:26:02,812 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: dataweavingFlow.stage1
+2018-03-15 10:26:03,030 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Admin\AnypointStudio\workspace\.mule\apps\dataweaving\dataweaving.xml'}]"
+2018-03-15 10:26:03,030 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Admin\AnypointStudio\workspace\.mule\apps\dataweaving\dataweaving.xml'}]"
+2018-03-15 10:26:06,062 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'dataweaving'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:26:06,062 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2018-03-15 10:26:06,062 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2018-03-15 10:26:06,127 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:5005
+2018-03-15 10:26:06,127 [main] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:26:06,127 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2018-03-15 10:26:06,143 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: dataweavingFlow
+2018-03-15 10:26:06,143 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: dataweavingFlow.stage1
+2018-03-15 10:26:06,174 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2018-03-15 10:26:06,190 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: dataweaving                                           *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2018-03-15 10:36:42,871 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'dataweaving'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:36:42,871 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: dataweavingFlow
+2018-03-15 10:36:42,871 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: dataweavingFlow.stage1
+2018-03-15 10:36:43,059 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2018-03-15 10:36:43,059 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://0.0.0.0:5005
+2018-03-15 10:36:43,075 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2018-03-15 10:36:43,075 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2018-03-15 10:36:43,075 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'dataweaving'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:36:43,075 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2018-03-15 10:36:43,075 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: dataweavingFlow
+2018-03-15 10:36:43,090 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: dataweavingFlow.stage1
+2018-03-15 10:36:43,090 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2018-03-15 10:36:43,262 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@3d6300e8: startup date [Thu Mar 15 10:25:59 GMT 2018]; root of context hierarchy
+2018-03-15 10:36:43,387 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "dataweaving" shut down normally on: 15/03/18 10:36    *
+* Up for: 0 days, 0 hours, 10 mins, 37.325 sec                       *
+**********************************************************************
+2018-03-15 10:36:43,465 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'dataweaving'                           +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:36:43,465 [Mule.app.deployer.monitor.1.thread.1] WARN  com.mulesoft.module.client.APIPlatformClientCoreExtension - Client ID or Client Secret were not provided. API Manager client is DISABLED for app dataweaving
+2018-03-15 10:36:43,465 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2018-03-15 10:36:43,465 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2018-03-15 10:36:43,481 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2018-03-15 10:36:43,481 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.8)
+2018-03-15 10:36:43,481 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@4c9883f8: startup date [Thu Mar 15 10:36:43 GMT 2018]; root of context hierarchy
+2018-03-15 10:36:43,731 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-03-15 10:36:43,825 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-tx-log\tx1.log and C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-tx-log\tx2.log
+2018-03-15 10:36:43,825 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-xa-tx-log\tx1.log and C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-xa-tx-log\tx2.log
+2018-03-15 10:36:43,825 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2018-03-15 10:36:43,825 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: dataweavingFlow
+2018-03-15 10:36:43,825 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@7938a9c0
+2018-03-15 10:36:43,840 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: dataweavingFlow.stage1
+2018-03-15 10:36:43,856 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Admin\AnypointStudio\workspace\.mule\apps\dataweaving\dataweaving.xml'}]"
+2018-03-15 10:36:43,856 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Admin\AnypointStudio\workspace\.mule\apps\dataweaving\dataweaving.xml'}]"
+2018-03-15 10:36:46,873 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'dataweaving'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:36:46,879 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2018-03-15 10:36:46,879 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2018-03-15 10:36:46,895 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:5005
+2018-03-15 10:36:46,895 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:36:46,910 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2018-03-15 10:36:46,910 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: dataweavingFlow
+2018-03-15 10:36:46,910 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: dataweavingFlow.stage1
+2018-03-15 10:36:46,926 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2018-03-15 10:36:46,926 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: dataweaving                                           *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2018-03-15 10:36:51,828 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'dataweaving'                           +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:36:52,000 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2018-03-15 10:36:52,094 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2018-03-15 10:36:52,202 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2018-03-15 10:36:52,202 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.8)
+2018-03-15 10:36:52,265 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@3d6300e8: startup date [Thu Mar 15 10:36:52 GMT 2018]; root of context hierarchy
+2018-03-15 10:36:53,468 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-03-15 10:36:54,389 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2018-03-15 10:36:55,077 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-tx-log\tx1.log and C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-tx-log\tx2.log
+2018-03-15 10:36:55,089 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-xa-tx-log\tx1.log and C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-xa-tx-log\tx2.log
+2018-03-15 10:36:55,167 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2018-03-15 10:36:55,183 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: dataweavingFlow
+2018-03-15 10:36:55,183 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@461c3709
+2018-03-15 10:36:55,214 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: dataweavingFlow.stage1
+2018-03-15 10:36:55,448 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Admin\AnypointStudio\workspace\.mule\apps\dataweaving\dataweaving.xml'}]"
+2018-03-15 10:36:55,448 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Admin\AnypointStudio\workspace\.mule\apps\dataweaving\dataweaving.xml'}]"
+2018-03-15 10:36:58,464 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'dataweaving'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:36:58,474 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2018-03-15 10:36:58,474 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2018-03-15 10:36:58,521 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:5005
+2018-03-15 10:36:58,521 [main] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:36:58,521 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2018-03-15 10:36:58,521 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: dataweavingFlow
+2018-03-15 10:36:58,521 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: dataweavingFlow.stage1
+2018-03-15 10:36:58,552 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2018-03-15 10:36:58,584 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: dataweaving                                           *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2018-03-15 10:44:59,854 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'dataweaving'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:44:59,854 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: dataweavingFlow
+2018-03-15 10:44:59,854 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: dataweavingFlow.stage1
+2018-03-15 10:44:59,963 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2018-03-15 10:44:59,979 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://0.0.0.0:5005
+2018-03-15 10:44:59,979 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2018-03-15 10:44:59,979 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2018-03-15 10:45:00,010 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'dataweaving'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:45:00,010 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2018-03-15 10:45:00,010 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: dataweavingFlow
+2018-03-15 10:45:00,010 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: dataweavingFlow.stage1
+2018-03-15 10:45:00,010 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2018-03-15 10:45:00,135 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@3d6300e8: startup date [Thu Mar 15 10:36:52 GMT 2018]; root of context hierarchy
+2018-03-15 10:45:00,213 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "dataweaving" shut down normally on: 15/03/18 10:45    *
+* Up for: 0 days, 0 hours, 8 mins, 1.749 sec                         *
+**********************************************************************
+2018-03-15 10:45:00,307 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'dataweaving'                           +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:45:00,307 [Mule.app.deployer.monitor.1.thread.1] WARN  com.mulesoft.module.client.APIPlatformClientCoreExtension - Client ID or Client Secret were not provided. API Manager client is DISABLED for app dataweaving
+2018-03-15 10:45:00,307 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2018-03-15 10:45:00,307 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2018-03-15 10:45:00,322 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2018-03-15 10:45:00,322 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.8)
+2018-03-15 10:45:00,322 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@2fdaafad: startup date [Thu Mar 15 10:45:00 GMT 2018]; root of context hierarchy
+2018-03-15 10:45:00,572 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-03-15 10:45:00,666 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-tx-log\tx1.log and C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-tx-log\tx2.log
+2018-03-15 10:45:00,666 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-xa-tx-log\tx1.log and C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-xa-tx-log\tx2.log
+2018-03-15 10:45:00,666 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2018-03-15 10:45:00,666 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: dataweavingFlow
+2018-03-15 10:45:00,666 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@5c964725
+2018-03-15 10:45:00,666 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: dataweavingFlow.stage1
+2018-03-15 10:45:00,697 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Admin\AnypointStudio\workspace\.mule\apps\dataweaving\dataweaving.xml'}]"
+2018-03-15 10:45:00,697 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Admin\AnypointStudio\workspace\.mule\apps\dataweaving\dataweaving.xml'}]"
+2018-03-15 10:45:03,697 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'dataweaving'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:45:03,704 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2018-03-15 10:45:03,704 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2018-03-15 10:45:03,735 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:5005
+2018-03-15 10:45:03,735 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:45:03,735 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2018-03-15 10:45:03,751 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: dataweavingFlow
+2018-03-15 10:45:03,751 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: dataweavingFlow.stage1
+2018-03-15 10:45:03,766 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2018-03-15 10:45:03,766 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: dataweaving                                           *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2018-03-15 10:45:28,821 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'dataweaving'                           +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:45:28,946 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2018-03-15 10:45:29,040 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2018-03-15 10:45:29,149 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2018-03-15 10:45:29,149 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.8)
+2018-03-15 10:45:29,212 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@3d6300e8: startup date [Thu Mar 15 10:45:29 GMT 2018]; root of context hierarchy
+2018-03-15 10:45:30,368 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-03-15 10:45:31,268 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2018-03-15 10:45:31,909 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-tx-log\tx1.log and C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-tx-log\tx2.log
+2018-03-15 10:45:31,924 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-xa-tx-log\tx1.log and C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-xa-tx-log\tx2.log
+2018-03-15 10:45:32,018 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2018-03-15 10:45:32,018 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: dataweavingFlow
+2018-03-15 10:45:32,034 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@461c3709
+2018-03-15 10:45:32,049 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: dataweavingFlow.stage1
+2018-03-15 10:45:32,284 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Admin\AnypointStudio\workspace\.mule\apps\dataweaving\dataweaving.xml'}]"
+2018-03-15 10:45:32,284 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Admin\AnypointStudio\workspace\.mule\apps\dataweaving\dataweaving.xml'}]"
+2018-03-15 10:45:35,299 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'dataweaving'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:45:35,309 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2018-03-15 10:45:35,309 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2018-03-15 10:45:35,356 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:5005
+2018-03-15 10:45:35,356 [main] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:45:35,356 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2018-03-15 10:45:35,356 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: dataweavingFlow
+2018-03-15 10:45:35,356 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: dataweavingFlow.stage1
+2018-03-15 10:45:35,403 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2018-03-15 10:45:35,419 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: dataweaving                                           *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2018-03-15 10:53:21,089 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'dataweaving'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:53:21,089 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: dataweavingFlow
+2018-03-15 10:53:21,089 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: dataweavingFlow.stage1
+2018-03-15 10:53:21,214 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2018-03-15 10:53:21,229 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://0.0.0.0:5005
+2018-03-15 10:53:21,229 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2018-03-15 10:53:21,229 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2018-03-15 10:53:21,245 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'dataweaving'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:53:21,245 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2018-03-15 10:53:21,245 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: dataweavingFlow
+2018-03-15 10:53:21,245 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: dataweavingFlow.stage1
+2018-03-15 10:53:21,261 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2018-03-15 10:53:21,370 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@3d6300e8: startup date [Thu Mar 15 10:45:29 GMT 2018]; root of context hierarchy
+2018-03-15 10:53:21,386 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "dataweaving" shut down normally on: 15/03/18 10:53    *
+* Up for: 0 days, 0 hours, 7 mins, 46.87 sec                         *
+**********************************************************************
+2018-03-15 10:53:21,448 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'dataweaving'                           +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:53:21,448 [Mule.app.deployer.monitor.1.thread.1] WARN  com.mulesoft.module.client.APIPlatformClientCoreExtension - Client ID or Client Secret were not provided. API Manager client is DISABLED for app dataweaving
+2018-03-15 10:53:21,464 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2018-03-15 10:53:21,464 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2018-03-15 10:53:21,464 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2018-03-15 10:53:21,464 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.8)
+2018-03-15 10:53:21,479 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@fa86f79: startup date [Thu Mar 15 10:53:21 GMT 2018]; root of context hierarchy
+2018-03-15 10:53:21,729 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-03-15 10:53:21,823 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-tx-log\tx1.log and C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-tx-log\tx2.log
+2018-03-15 10:53:21,823 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-xa-tx-log\tx1.log and C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-xa-tx-log\tx2.log
+2018-03-15 10:53:21,839 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2018-03-15 10:53:21,839 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: dataweavingFlow
+2018-03-15 10:53:21,839 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@28daf6a1
+2018-03-15 10:53:21,839 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: dataweavingFlow.stage1
+2018-03-15 10:53:21,870 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Admin\AnypointStudio\workspace\.mule\apps\dataweaving\dataweaving.xml'}]"
+2018-03-15 10:53:21,870 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Admin\AnypointStudio\workspace\.mule\apps\dataweaving\dataweaving.xml'}]"
+2018-03-15 10:53:26,066 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'dataweaving'                           +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:53:26,194 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2018-03-15 10:53:26,303 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2018-03-15 10:53:26,412 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2018-03-15 10:53:26,412 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.8)
+2018-03-15 10:53:26,475 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@3d6300e8: startup date [Thu Mar 15 10:53:26 GMT 2018]; root of context hierarchy
+2018-03-15 10:53:27,584 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-03-15 10:53:28,471 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2018-03-15 10:53:29,127 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-tx-log\tx1.log and C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-tx-log\tx2.log
+2018-03-15 10:53:29,139 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-xa-tx-log\tx1.log and C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-xa-tx-log\tx2.log
+2018-03-15 10:53:29,233 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2018-03-15 10:53:29,233 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: dataweavingFlow
+2018-03-15 10:53:29,233 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@461c3709
+2018-03-15 10:53:29,279 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: dataweavingFlow.stage1
+2018-03-15 10:53:29,498 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Admin\AnypointStudio\workspace\.mule\apps\dataweaving\dataweaving.xml'}]"
+2018-03-15 10:53:29,498 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Admin\AnypointStudio\workspace\.mule\apps\dataweaving\dataweaving.xml'}]"
+2018-03-15 10:53:32,514 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'dataweaving'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:53:32,522 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2018-03-15 10:53:32,522 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2018-03-15 10:53:32,585 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:5005
+2018-03-15 10:53:32,600 [main] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:53:32,600 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2018-03-15 10:53:32,600 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: dataweavingFlow
+2018-03-15 10:53:32,600 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: dataweavingFlow.stage1
+2018-03-15 10:53:32,631 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2018-03-15 10:53:32,647 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: dataweaving                                           *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2018-03-15 10:59:01,877 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'dataweaving'                           +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:59:01,993 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2018-03-15 10:59:02,102 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2018-03-15 10:59:02,205 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2018-03-15 10:59:02,205 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.8)
+2018-03-15 10:59:02,267 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@3d6300e8: startup date [Thu Mar 15 10:59:02 GMT 2018]; root of context hierarchy
+2018-03-15 10:59:03,455 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-03-15 10:59:04,345 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2018-03-15 10:59:04,986 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-tx-log\tx1.log and C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-tx-log\tx2.log
+2018-03-15 10:59:04,989 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-xa-tx-log\tx1.log and C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-xa-tx-log\tx2.log
+2018-03-15 10:59:05,098 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2018-03-15 10:59:05,098 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: dataweavingFlow
+2018-03-15 10:59:05,098 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@461c3709
+2018-03-15 10:59:05,129 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: dataweavingFlow.stage1
+2018-03-15 10:59:05,373 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Admin\AnypointStudio\workspace\.mule\apps\dataweaving\dataweaving.xml'}]"
+2018-03-15 10:59:05,373 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Admin\AnypointStudio\workspace\.mule\apps\dataweaving\dataweaving.xml'}]"
+2018-03-15 10:59:08,409 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'dataweaving'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:59:08,423 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2018-03-15 10:59:08,423 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2018-03-15 10:59:08,470 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:5005
+2018-03-15 10:59:08,470 [main] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 10:59:08,470 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2018-03-15 10:59:08,470 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: dataweavingFlow
+2018-03-15 10:59:08,470 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: dataweavingFlow.stage1
+2018-03-15 10:59:08,517 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2018-03-15 10:59:08,532 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: dataweaving                                           *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2018-03-15 11:07:39,115 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'dataweaving'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 11:07:39,119 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: dataweavingFlow
+2018-03-15 11:07:39,121 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: dataweavingFlow.stage1
+2018-03-15 11:07:39,285 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2018-03-15 11:07:39,302 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://0.0.0.0:5005
+2018-03-15 11:07:39,305 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2018-03-15 11:07:39,305 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2018-03-15 11:07:39,318 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'dataweaving'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 11:07:39,320 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2018-03-15 11:07:39,324 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: dataweavingFlow
+2018-03-15 11:07:39,325 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: dataweavingFlow.stage1
+2018-03-15 11:07:39,330 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2018-03-15 11:07:39,494 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@3d6300e8: startup date [Thu Mar 15 10:59:02 GMT 2018]; root of context hierarchy
+2018-03-15 11:07:39,578 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "dataweaving" shut down normally on: 15/03/18 11:07    *
+* Up for: 0 days, 0 hours, 8 mins, 31.162 sec                        *
+**********************************************************************
+2018-03-15 11:07:39,681 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'dataweaving'                           +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 11:07:39,684 [Mule.app.deployer.monitor.1.thread.1] WARN  com.mulesoft.module.client.APIPlatformClientCoreExtension - Client ID or Client Secret were not provided. API Manager client is DISABLED for app dataweaving
+2018-03-15 11:07:39,686 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2018-03-15 11:07:39,690 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2018-03-15 11:07:39,701 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2018-03-15 11:07:39,701 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.8)
+2018-03-15 11:07:39,703 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@31ae04a3: startup date [Thu Mar 15 11:07:39 GMT 2018]; root of context hierarchy
+2018-03-15 11:07:39,925 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-03-15 11:07:40,009 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-tx-log\tx1.log and C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-tx-log\tx2.log
+2018-03-15 11:07:40,010 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-xa-tx-log\tx1.log and C:\Users\Admin\AnypointStudio\workspace\.mule\.\.mule\dataweaving\queue-xa-tx-log\tx2.log
+2018-03-15 11:07:40,019 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2018-03-15 11:07:40,021 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: dataweavingFlow
+2018-03-15 11:07:40,022 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@1269ceca
+2018-03-15 11:07:40,028 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: dataweavingFlow.stage1
+2018-03-15 11:07:40,052 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Admin\AnypointStudio\workspace\.mule\apps\dataweaving\dataweaving.xml'}]"
+2018-03-15 11:07:40,052 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Admin\AnypointStudio\workspace\.mule\apps\dataweaving\dataweaving.xml'}]"
+2018-03-15 11:07:43,057 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'dataweaving'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 11:07:43,066 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2018-03-15 11:07:43,066 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2018-03-15 11:07:43,093 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:5005
+2018-03-15 11:07:43,097 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2018-03-15 11:07:43,098 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2018-03-15 11:07:43,100 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: dataweavingFlow
+2018-03-15 11:07:43,100 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: dataweavingFlow.stage1
+2018-03-15 11:07:43,119 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2018-03-15 11:07:43,128 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: dataweaving                                           *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************

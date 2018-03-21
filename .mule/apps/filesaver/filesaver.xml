@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:cors="http://www.mulesoft.org/schema/mule/cors"
+	xmlns:file="http://www.mulesoft.org/schema/mule/file"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/cors http://www.mulesoft.org/schema/mule/cors/current/mule-cors.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd">
+    <http:listener-config name="HTTP_Listener_Configuration" host="0.0.0.0" port="5000" doc:name="HTTP Listener Configuration"/>
+    <cors:config name="Cors_Configuration" doc:name="Cors Configuration">
+	    	<cors:origins>
+	        	<cors:origin url="*" accessControlMaxAge="180">
+	            	<cors:methods>
+	                	<cors:method>GET</cors:method>
+	                	<cors:method>POST</cors:method>
+	                 	<cors:method>PUT</cors:method>
+	                 	<cors:method>DELETE</cors:method>
+	                 	<cors:method>OPTIONS</cors:method>
+	             	</cors:methods>
+	             <cors:headers>
+	                 <cors:header>X-Allow-Origin</cors:header>
+	             </cors:headers>
+	         </cors:origin>
+	     	</cors:origins>
+	 	</cors:config>
+    <flow name="filesaverFlow">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/" doc:name="HTTP"/>
+         <cors:validate config-ref="Cors_Configuration" publicResource="true" acceptsCredentials="false" doc:name="CORS Validate"/>
+        <logger message="received" level="INFO" doc:name="Logger"/>
+        <logger message="payload = #[payload]" level="INFO" doc:name="payload1"/>
+        <logger message="message = #[message]" level="INFO" doc:name="message"/>
+    </flow>
+    <sub-flow name="filesaverSub_Flow">
+        <set-payload value="abc" doc:name="Set Payload"/>
+        <logger message="#[payload]" level="INFO" doc:name="payload"/>
+        <set-variable variableName="fileName" value="abc.txt" doc:name="Variable"/>
+        <set-variable variableName="folderName" value="temp123" doc:name="Variable"/>
+        <file:outbound-endpoint path="c:\#[flowVars.folderName]" responseTimeout="10000" doc:name="File"/>
+        <json:object-to-json-transformer doc:name="Object to JSON"/>
+    </sub-flow>
+    
+     
+     
+     
+    
+     
+</mule>
